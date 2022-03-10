@@ -17,3 +17,15 @@
     border-radius: 10px;
 }
 
+#subscribe{
+    height: 300px;
+    background-color: #70baec;
+}
+#subscribe h6{
+    color: grey;
+}
+
+
+footer{
+    text-align: center;
+}
