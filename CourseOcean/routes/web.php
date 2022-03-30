@@ -18,8 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login',[RegistrationLoginController::class,'login']);
+Route::get('/login',[RegistrationLoginController::class,'login'])->middleware('alreadyLoggedIn');
 
-Route::get('registration',[RegistrationLoginController::class,'registration']);
+Route::get('/registration',[RegistrationLoginController::class,'registration'])->middleware('alreadyLoggedIn');
 
 Route::post('/register-user',[RegistrationLoginController::class,'registerUser'])->name('register-user');
+
+Route::post('/login-user',[RegistrationLoginController::class,'loginUser'])->name('login-user');
+
+Route::get('/dashboard',[RegistrationLoginController::class,'dashboard'])->middleware('isLoggedIn');

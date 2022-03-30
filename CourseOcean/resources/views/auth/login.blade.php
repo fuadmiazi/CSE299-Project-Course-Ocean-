@@ -38,20 +38,33 @@
     </div>
 
     <div class="container d-flex justify-content-center align-items-center">
-    <div class="login-form">
-            <form>
-                <div class="">
-                  <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <a href="registration">Don't have an account? Registration here...</a><br><br>
-                <button type="submit" class="btn btn-primary">Login</button>
-              </form>
+    <div class="registration-form ">
+    <form action="{{route('login-user')}}" method="post">
+                    @if(Session::has('success'))
+                    <div class="alert alert-success">{{Session::get('success')}}</div>
+                    @endif
+                    @if(Session::has('fail'))
+                    <div class="alert alert-danger">{{Session::get('fail')}}</div>
+                    @endif
+                    @csrf
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" placeholder="Enter Email" name="email" value="{{old('email')}}">
+                        <span class="text-danger">@error('email') {{$message}} @enderror</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter Password" name="password" value="">
+                        <span class="text-danger">@error('password') {{$message}} @enderror</span>
+                        <br>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-block btn-primary" type="submit">Login</button>
+                    </div>
+                    <br>
+                    <a href="registration">Dont Have an Account? Register Here...</a>
+                </form>
           </div>
     </div>
           
