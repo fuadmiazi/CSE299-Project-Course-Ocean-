@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Sixteen Clothing HTML Template</title>
+    <title>Course Ocean</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Sixteen <em>Clothing</em></h2></a>
+          <a class="navbar-brand" href="index.html"><h2>Course <em>Ocean</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -100,13 +100,13 @@ https://templatemo.com/tm-546-sixteen-clothing
         <div class="banner-item-01">
           <div class="text-content">
             <h4>Best Offer</h4>
-            <h2>New Arrivals On Sale</h2>
+            <h2>New Courses On Sale</h2>
           </div>
         </div>
         <div class="banner-item-02">
           <div class="text-content">
             <h4>Flash Deals</h4>
-            <h2>Get your best products</h2>
+            <h2>Get your favourite Courses</h2>
           </div>
         </div>
         <div class="banner-item-03">

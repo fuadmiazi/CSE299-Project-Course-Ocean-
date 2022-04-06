@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\User;
 
+use App\Models\Course;
+
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -20,7 +22,9 @@ class HomeController extends Controller
         }
         else
         {
-            return view('user.home');
+            $data = course::paginate(3);
+
+            return view('user.home',compact('data'));
         }
     }
 
@@ -32,7 +36,9 @@ class HomeController extends Controller
         }
         else
         {
-            return view('user.home');
+            $data = course::paginate(3);
+
+            return view('user.home',compact('data'));
         }
 
     }
