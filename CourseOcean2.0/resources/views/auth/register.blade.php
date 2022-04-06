@@ -20,6 +20,15 @@
             </div>
 
             <div class="mt-4">
+            <x-jet-label for="userType" value="{{ __('User Type') }}" />
+            <select name="userType" class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm block mt-1 w-full">
+                <option value="Select">Select</option>
+                <option value="learner">Learner</option>
+                <option value="instructor">Instructor</option>
+            </select>
+            </div>
+
+            <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
