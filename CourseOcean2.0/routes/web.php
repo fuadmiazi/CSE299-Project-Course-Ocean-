@@ -36,3 +36,10 @@ Route::get('/course',[AdminController::class,'course']);
 
 Route::post('/uploadCourse',[AdminController::class,'uploadCourse']);
 
+Route::get('/showcourse',[AdminController::class,'showcourse']);
+
+Route::get('/deletecourse/{id}',[AdminController::class,'deletecourse']);
+
+
+
+

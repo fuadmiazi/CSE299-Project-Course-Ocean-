@@ -33,4 +33,22 @@ class AdminController extends Controller
 
         return redirect()->back()->with('message','Course Added Successfully!!!');
     }
+
+    public function showcourse()
+    {
+        $data = course::all();
+
+
+
+        return view('admin.showproduct',compact('data'));
+    }
+
+    public function deletecourse($id)
+    {
+        $data = course::find($id);
+
+        $data->delete();
+
+        return redirect()->back()->with('message','Course Deleted Successfully!!!');;
+    }
 }
