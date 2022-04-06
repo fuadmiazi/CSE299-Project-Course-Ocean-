@@ -40,6 +40,10 @@ Route::get('/showcourse',[AdminController::class,'showcourse']);
 
 Route::get('/deletecourse/{id}',[AdminController::class,'deletecourse']);
 
+Route::get('/updateview/{id}',[AdminController::class,'updateview']);
+
+Route::post('/updatecourse/{id}',[AdminController::class,'updatecourse']);
+
 
 
 

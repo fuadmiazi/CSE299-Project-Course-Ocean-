@@ -47,7 +47,7 @@
             <td><img height="300" width="600" src="/productimage/{{$course->image}}" alt=""></td>
 
             <td>
-                <a class="btn btn-primary" href="">Update</a>
+                <a class="btn btn-primary" href="{{url('updateview',$course->id)}}">Update</a>
             </td>
 
             <td>
