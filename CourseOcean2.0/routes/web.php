@@ -29,4 +29,4 @@ Route::middleware([
 
 Route::get('/redirect',[HomeController::class,'redirect']);
 
-Route::get('/home',[HomeController::class,'index']);
+Route::get('/',[HomeController::class,'index']);
