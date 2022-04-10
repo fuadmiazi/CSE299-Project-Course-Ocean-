@@ -10,7 +10,11 @@ use App\Models\Course;
 
 use App\Models\Cart;
 
+use App\Models\Order;
+
 use Illuminate\Support\Facades\Auth;
+
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -109,6 +113,37 @@ class HomeController extends Controller
         $data = cart::find($id);
         $data->delete();
 
-        return redirect()->back()->with('message','Course Removed Successfully!');;
+        return redirect()->back()->with('message','Course Removed Successfully!');
+    }
+
+    public function confirmOrder(Request $request)
+    {
+        $user = auth()->user();
+
+        $name = $user->name;
+        $email = $user->email;
+
+        foreach($request->coursename as $key=>$coursename)
+        {
+            $order = new order;
+
+            $order->course_name=$request->coursename[$key];
+            
+            $order->price=$request->price[$key]; 
+
+            $order->name = $name;
+
+            $order->email = $email;
+
+            $order->status='not confirmed';
+
+            $order->save();
+
+        }
+
+        DB::table('carts')->where('email',$email)->delete();
+
+        return redirect()->back()->with('message','Course Purchased Successfully!');
+
     }
 }
