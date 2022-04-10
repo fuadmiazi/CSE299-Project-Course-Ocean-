@@ -9,6 +9,8 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <title>Course Ocean</title>
 
     <!-- Bootstrap core CSS -->
@@ -91,6 +93,20 @@ https://templatemo.com/tm-546-sixteen-clothing
           </div>
         </div>
       </nav>
+
+      @if(session()->has('message'))
+
+<div class="alert alert-success">
+
+
+    <button type="button" class="close" data-dismiss="alert">x</button>
+
+    {{session()->get('message')}}
+
+</div>
+
+@endif
+
     </header>
 
     <!-- Page Content -->
@@ -126,12 +142,12 @@ https://templatemo.com/tm-546-sixteen-clothing
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>About Sixteen Clothing</h2>
+              <h2>About Course Ocean</h2>
             </div>
           </div>
           <div class="col-md-6">
             <div class="left-content">
-              <h4>Looking for the best products?</h4>
+              <h4>Looking for the best course?</h4>
               <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">This template</a> is free to use for your business websites. However, you have no permission to redistribute the downloadable ZIP file on any template collection website. <a rel="nofollow" href="https://templatemo.com/contact">Contact us</a> for more info.</p>
               <ul class="featured-list">
                 <li><a href="#">Lorem ipsum dolor sit amet</a></li>
@@ -160,7 +176,7 @@ https://templatemo.com/tm-546-sixteen-clothing
             <div class="inner-content">
               <div class="row">
                 <div class="col-md-8">
-                  <h4>Creative &amp; Unique <em>Sixteen</em> Products</h4>
+                  <h4>Creative &amp; Unique <em>Course</em> Ocean</h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis amet elite author nulla.</p>
                 </div>
                 <div class="col-md-4">
@@ -179,7 +195,7 @@ https://templatemo.com/tm-546-sixteen-clothing
         <div class="row">
           <div class="col-md-12">
             <div class="inner-content">
-              <p>Copyright &copy; 2020 Sixteen Clothing Co., Ltd.
+              <p>Copyright &copy; 2022 Course Ocean Co., Ltd.
             
             - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
             </div>
@@ -212,6 +228,8 @@ https://templatemo.com/tm-546-sixteen-clothing
           }
       }
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 
   </body>

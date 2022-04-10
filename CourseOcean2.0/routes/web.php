@@ -44,6 +44,10 @@ Route::get('/updateview/{id}',[AdminController::class,'updateview']);
 
 Route::post('/updatecourse/{id}',[AdminController::class,'updatecourse']);
 
+Route::get('/search',[HomeController::class,'search']);
+
+Route::post('/addToCart/{id}',[HomeController::class,'addToCart']);
+
 
 
 
