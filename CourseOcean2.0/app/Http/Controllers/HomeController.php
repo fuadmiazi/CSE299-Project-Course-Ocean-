@@ -26,7 +26,11 @@ class HomeController extends Controller
         {
             $data = course::paginate(3);
 
-            return view('user.home',compact('data'));
+            $user = auth()->user();
+
+            $count = cart::where('email',$user->email)->count();
+
+            return view('user.home',compact('data','count'));
         }
     }
 
@@ -87,5 +91,24 @@ class HomeController extends Controller
         {
             return redirect('login');
         }
+    }
+
+    public function showCart()
+    {
+        $user = auth()->user();
+
+        $cart = cart::where('email',$user->email)->get();
+
+        $count = cart::where('email',$user->email)->count();
+
+        return view('user.showcart',compact('count','cart'));
+    }
+
+    public function deleteCart($id)
+    {
+        $data = cart::find($id);
+        $data->delete();
+
+        return redirect()->back()->with('message','Course Removed Successfully!');;
     }
 }

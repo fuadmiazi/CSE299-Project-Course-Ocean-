@@ -48,6 +48,13 @@ Route::get('/search',[HomeController::class,'search']);
 
 Route::post('/addToCart/{id}',[HomeController::class,'addToCart']);
 
+Route::get('/showCart',[HomeController::class,'showCart']);
+
+Route::get('/delete/{id}',[HomeController::class,'deleteCart']);
+
+
+
+
 
 
 
