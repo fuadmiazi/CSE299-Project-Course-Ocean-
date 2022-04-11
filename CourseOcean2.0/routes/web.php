@@ -54,6 +54,13 @@ Route::get('/delete/{id}',[HomeController::class,'deleteCart']);
 
 Route::post('/order',[HomeController::class,'confirmOrder']);
 
+Route::get('/showorder',[AdminController::class,'showorder']);
+
+Route::get('/updateStatus/{id}',[AdminController::class,'updateStatus']);
+
+
+
+
 
 
 

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Course;
 
+use App\Models\Order;
+
 class AdminController extends Controller
 {
     public function course()
@@ -80,5 +82,23 @@ class AdminController extends Controller
         $data->save();
 
         return redirect()->back()->with('message','Course Updated Successfully!!!');
+    }
+
+    public function showorder()
+    {
+        $order = order::all();
+
+        return view('admin.showorder',compact('order'));
+    }
+
+    public function updateStatus($id)
+    {
+        $order = order::find($id);
+
+        $order->status='Confirmed';
+
+        $order->save();
+
+        return redirect()->back();
     }
 }
